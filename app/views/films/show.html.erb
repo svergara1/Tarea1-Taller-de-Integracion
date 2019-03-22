@@ -1,0 +1,44 @@
+<p id="notice"><%=notice%></p>
+
+<div class="center big red">
+		<h1>SWAPI</h1>
+		<p class="lead">The Star Wars API</p>
+</div>
+
+<h1>List of Films</h1>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Film Name</th>
+			<th>Opening Crawl</th>
+			<th>Director</th>
+			<th>Producer</th>
+			<th>Release Date(s)</th>
+		</tr>
+	</thead>
+	<tbody >
+			<tr>
+				<td><%= @film['title'] %></td>
+				<td><%= @film['opening_crawl'] %></td>
+				<td><%= @film['director'] %></td>
+				<td><%= @film['producer'] %></td>
+				<td><%= @film['release_date'] %></td>
+			</tr>		
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th>Opening Crawl</th>
+		</tr>
+	</thead>
+	<tbody >
+			<tr>
+				<td><%= @film['opening_crawl'] %></td>
+			</tr>		
+	</tbody>
+</table>
+
