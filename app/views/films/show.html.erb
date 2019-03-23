@@ -2,17 +2,16 @@
 
 <div class="center big red">
 		<h1>SWAPI</h1>
-		<p class="lead">The Star Wars API</p>
+		<p class="lead">The Star Wars API created by Santiago Vergara</p>
 </div>
 
 <h1>List of Films</h1>
 
 
-<table>
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Film Name</th>
-			<th>Opening Crawl</th>
 			<th>Director</th>
 			<th>Producer</th>
 			<th>Release Date(s)</th>
@@ -21,7 +20,6 @@
 	<tbody >
 			<tr>
 				<td><%= @film['title'] %></td>
-				<td><%= @film['opening_crawl'] %></td>
 				<td><%= @film['director'] %></td>
 				<td><%= @film['producer'] %></td>
 				<td><%= @film['release_date'] %></td>
@@ -29,7 +27,7 @@
 	</tbody>
 </table>
 
-<table>
+<table class="table">
 	<thead>
 		<tr>
 			<th>Opening Crawl</th>
@@ -41,4 +39,55 @@
 			</tr>		
 	</tbody>
 </table>
+
+<table class="table table-striped" >
+	<thead>
+		<tr>
+			<th>Planets</th>
+		</tr>
+	</thead>
+	<tbody >
+			<% @planets.each do |planet| %>
+			<tr>
+				<td><li><%= link_to  planet['name'], planet_url(planet['url'].split('/')[-1]) %></li></td>		
+			</tr>
+		<%end%>	
+	</tbody>
+</table>
+
+<table class="table table-striped" >
+	<thead>
+		<tr>
+			<th>Starships</th>
+		</tr>
+	</thead>
+	<tbody >
+			<% @starships.each do |starship| %>
+			<tr>
+				
+				<td><li><%= link_to  starship['name'], starship_url(starship['url'].split('/')[-1]) %></li></td>		
+			</tr>
+		<%end%>	
+	</tbody>
+</table>
+
+<table class="table table-striped" >
+	<thead>
+		<tr>
+			<th>Characters</th>
+		</tr>
+	</thead>
+	<tbody >
+			<% @characters.each do |character| %>
+			<tr>
+				
+				<td><li><%= link_to  character['name'], person_url(character['url'].split('/')[-1]) %></li></td>			
+			</tr>
+		<%end%>	
+	</tbody>
+</table>
+
+
+
+
 

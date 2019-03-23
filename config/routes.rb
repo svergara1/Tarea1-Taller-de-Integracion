@@ -4,6 +4,18 @@ Rails.application.routes.draw do
   resources :films do
   	get 'films/:id' => 'films#show'
   end
+  resources :persons do
+  	get 'persons/:id' => 'persons#show'
+  end  
+  resources :starships do
+  	get 'starships/:id' => 'starships#show'
+  end 
+  resources :planets do
+  	get 'planets/:id' => 'planets#show'
+  end 
+  
+
 
 
 end
+	

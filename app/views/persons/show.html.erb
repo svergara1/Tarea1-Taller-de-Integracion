@@ -1,0 +1,53 @@
+<p id="notice"><%=notice%></p>
+
+<div class="center big red">
+		<h1>SWAPI</h1>
+		<p class="lead">The Star Wars API created by Santiago Vergara</p>
+</div>
+
+<h1>Person Information</h1>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Height</th>
+			<th>Mass</th>
+			<th>Hair Color</th>
+			<th>Skin Color</th>
+			<th>Eye Color</th>
+			<th>Birth Year</th>
+			<th>Gender</th>
+			<th>Homeworld</th>
+		</tr>
+	</thead>
+	<tbody >
+			<tr>
+				<td><%= @person['name'] %></td>
+				<td><%= @person['height'] %></td>
+				<td><%= @person['mass'] %></td>
+				<td><%= @person['hair_color'] %></td>
+				<td><%= @person['skin_color'] %></td>
+				<td><%= @person['eye_color'] %></td>
+				<td><%= @person['birth_year'] %></td>
+				<td><%= @person['gender'] %></td>
+				<td><li><%= link_to  @planet['name'], planet_url(@planet['url'].split('/')[-1]) %></li></td>
+			</tr>		
+	</tbody>
+</table>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Films</th>
+		</tr>
+	</thead>
+	<tbody >
+			<% @films.each do |film| %>
+			<tr>
+				<td><li><%= link_to  film['title'], film_url(film['episode_id']) %></li></td>
+			</tr>
+		<%end%>			
+	</tbody>
+</table>

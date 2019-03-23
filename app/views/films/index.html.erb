@@ -2,19 +2,20 @@
 
 <div class="center big red">
 		<h1>SWAPI</h1>
-		<p class="lead">The Star Wars API</p>
+		<p class="lead">The Star Wars API created by Santiago Vergara</p>
 </div>
 
 <h1>List of Films</h1>
 
 
-<table>
+<table class="table">
 	<thead>
 		<tr>
 			<th>Film Name</th>
 			<th>Year</th>
 			<th>Director</th>
 			<th>Producer(s)</th>
+			<th>Episode</th>
 		</tr>
 	</thead>
 	<tbody >
@@ -23,7 +24,8 @@
 				<td><li><%= link_to  film['title'], film_url(film['episode_id']) %></li></td>
 				<td><%= film['release_date'] %></td>
 				<td><%= film['director'] %></td>
-				<td><%= film['producer'] %></td>				
+				<td><%= film['producer'] %></td>
+				<td><%= film['episode_id'] %></td>				
 			</tr>
 		<%end%>
 	</tbody>
