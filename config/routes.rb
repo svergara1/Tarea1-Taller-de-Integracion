@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   resources :planets do
   	get 'planets/:id' => 'planets#show'
   end 
+  resources :searchbar do
+  	get 'searchbar' => 'searchbar#show'
+  end 
   
-
-
 
 end
 	
