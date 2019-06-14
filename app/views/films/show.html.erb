@@ -14,10 +14,10 @@
 	</thead>
 	<tbody >
 			<tr>
-				<td><%= @film['title'] %></td>
-				<td><%= @film['director'] %></td>
-				<td><%= @film['producer'] %></td>
-				<td><%= @film['release_date'] %></td>
+				<td><%= @film.title %></td>
+				<td><%= @film.director %></td>
+				<td><%= @film.producers %></td>
+				<td><%= @film.release_date %></td>
 			</tr>		
 	</tbody>
 </table>
@@ -30,7 +30,7 @@
 	</thead>
 	<tbody >
 			<tr>
-				<td><%= @film['opening_crawl'] %></td>
+				<td><%= @film.opening_crawl %></td>
 			</tr>		
 	</tbody>
 </table>
@@ -44,7 +44,7 @@
 	<tbody >
 			<% @planets.each do |planet| %>
 			<tr>
-				<td><li><%= link_to  planet['name'], planet_url(planet['url'].split('/')[-1]) %></li></td>		
+				<td><li><%= link_to  planet.name, planet_url(planet.id) %></li></td>		
 			</tr>
 		<%end%>	
 	</tbody>
@@ -60,7 +60,7 @@
 			<% @starships.each do |starship| %>
 			<tr>
 				
-				<td><li><%= link_to  starship['name'], starship_url(starship['url'].split('/')[-1]) %></li></td>		
+				<td><li><%= link_to  starship.name, starship_url(starship.id) %></li></td>		
 			</tr>
 		<%end%>	
 	</tbody>
@@ -76,7 +76,7 @@
 			<% @characters.each do |character| %>
 			<tr>
 				
-				<td><li><%= link_to  character['name'], person_url(character['url'].split('/')[-1]) %></li></td>			
+				<td><li><%= link_to  character.name, person_url(character.id) %></li></td>			
 			</tr>
 		<%end%>	
 	</tbody>

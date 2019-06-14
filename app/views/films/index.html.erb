@@ -16,11 +16,11 @@
 	<tbody >
 		<% @films.each do |film| %>
 			<tr>
-				<td><li><%= link_to  film['title'], film_url(film['episode_id']) %></li></td>
-				<td><%= film['release_date'] %></td>
-				<td><%= film['director'] %></td>
-				<td><%= film['producer'] %></td>
-				<td><%= film['episode_id'] %></td>				
+				<td><li><%= link_to  film.title, film_url(film.id) %></li></td>
+				<td><%= film.release_date %></td>
+				<td><%= film.director %></td>
+				<td><%= film.producers %></td>
+				<td><%= film.episode_id %></td>				
 			</tr>
 		<%end%>
 	</tbody>

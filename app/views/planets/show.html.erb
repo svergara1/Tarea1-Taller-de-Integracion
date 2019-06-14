@@ -19,15 +19,15 @@
 	</thead>
 	<tbody >
 			<tr>
-				<td><%= @planet['name'] %></td>
-				<td><%= @planet['rotation_period'] %></td>
-				<td><%= @planet['orbital_period'] %></td>
-				<td><%= @planet['diameter'] %></td>
-				<td><%= @planet['climate'] %></td>
-				<td><%= @planet['gravity'] %></td>
-				<td><%= @planet['terrain'] %></td>
-				<td><%= @planet['surface_water'] %></td>
-				<td><%= @planet['population'] %></td>
+				<td><%= @planet.name %></td>
+				<td><%= @planet.rotation_period %></td>
+				<td><%= @planet.orbital_period %></td>
+				<td><%= @planet.diameter %></td>
+				<td><%= @planet.climates %></td>
+				<td><%= @planet.gravity %></td>
+				<td><%= @planet.terrains %></td>
+				<td><%= @planet.surface_water %></td>
+				<td><%= @planet.population %></td>
 			</tr>		
 	</tbody>
 </table>
@@ -39,9 +39,9 @@
 		</tr>
 	</thead>
 	<tbody >
-			<% @residents.each do |resident| %>
+			<% @persons.each do |resident| %>
 			<tr>
-				<td><li><%= link_to  resident['name'], person_url(resident['url'].split('/')[-1]) %></li></td>
+				<td><li><%= link_to  resident.name, person_url(resident.id) %></li></td>
 			</tr>
 		<%end%>			
 	</tbody>
@@ -56,7 +56,7 @@
 	<tbody >
 			<% @films.each do |film| %>
 			<tr>
-				<td><li><%= link_to  film['title'], film_url(film['episode_id']) %></li></td>
+				<td><li><%= link_to  film.title, film_url(film.id) %></li></td>
 			</tr>
 		<%end%>			
 	</tbody>
